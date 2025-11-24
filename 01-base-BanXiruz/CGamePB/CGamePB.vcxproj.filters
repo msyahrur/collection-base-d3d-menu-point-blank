@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\D3D">
+      <UniqueIdentifier>{9995bcd9-4e0e-446a-8d5a-7e0c7b5490cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ESP">
+      <UniqueIdentifier>{eb09a452-0a1c-47f2-9b7a-c7e858cf1484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hack">
+      <UniqueIdentifier>{086602f9-ec6c-4199-9634-216df9ae798d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Menu">
+      <UniqueIdentifier>{6c0b12ae-5798-4265-ac0b-ba20a664c803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{a622e1a6-582d-466a-8275-dec529b0e73b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools\Logger">
+      <UniqueIdentifier>{043fee59-185d-47bf-8b72-e894fccf5ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools\GameClass">
+      <UniqueIdentifier>{d801a786-55e3-4796-a445-2a3bbc91d691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools\GameClass\Class">
+      <UniqueIdentifier>{c36fe9e7-f0a1-4b12-9a5f-52362836f809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools\Hdsn">
+      <UniqueIdentifier>{5379bc0e-80c6-4e17-8efe-b8f49e6fe10a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddyLogger.h">
+      <Filter>Header Files\Tools\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="AddyFunction.h">
+      <Filter>Header Files\Tools\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderContext.h">
+      <Filter>Header Files\Tools\GameClass\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameFramework.h">
+      <Filter>Header Files\Tools\GameClass\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameContext.h">
+      <Filter>Header Files\Tools\GameClass\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameCharaManager.h">
+      <Filter>Header Files\Tools\GameClass\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameCharaBase.h">
+      <Filter>Header Files\Tools\GameClass\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClasses.h">
+      <Filter>Header Files\Tools\GameClass</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DColor.h">
+      <Filter>Header Files\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DHack.h">
+      <Filter>Header Files\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DHook.h">
+      <Filter>Header Files\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="HackFunctions.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="HackHook.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="HackLoop.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="ESPLoop.h">
+      <Filter>Header Files\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="ESPFunctions.h">
+      <Filter>Header Files\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameworkMenu.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuClass.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuSound.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Hdsn.h">
+      <Filter>Header Files\Tools\Hdsn</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHdsn.h">
+      <Filter>Header Files\Tools\Hdsn</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectInputKey.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawingTools.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FeatureStruct.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Hdsn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
