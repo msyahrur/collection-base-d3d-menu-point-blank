@@ -1,0 +1,378 @@
+//----------------------------------------------------------------------------------------
+//---------------------------------------------------------// Last Coded By Stenly Andika-
+//----------------------------------------------------------------------------------------
+
+#pragma once
+
+#define WIN32_LEAN_AND_MEAN
+#define WIN32_EXTRA_LEAN
+
+#include <windows.h>
+#include <iostream>
+#include <time.h>
+#include <conio.h>
+#include <stdio.h>
+#include <tchar.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <direct.h>
+#include <fcntl.h>
+#include <io.h>
+#include <vector>
+#include <rpc.h>
+#include <rpcdce.h>
+#include <iomanip>
+#include <cstdlib>
+#include <malloc.h>
+#include <math.h>
+#include <tlhelp32.h>
+#include <process.h>
+#include <shellapi.h>
+#include "winsock.h"
+#include <fstream>
+#include <string>
+#include <iostream>
+#include <string.h>
+#include <d3d9.h>
+#include <d3dx9.h>
+#include <wininet.h>
+#include <conio.h>
+#include <tchar.h>
+#include <Iphlpapi.h>
+#include <Assert.h>
+#pragma comment(lib, "iphlpapi.lib")
+#pragma comment(lib,"d3d9.lib")
+#pragma comment(lib,"d3dx9.lib")
+#pragma comment (lib, "wininet.lib")
+#include <iostream>
+#include <string>
+using namespace std;
+//----------------------------------------------------------------------------------------
+#include <psapi.h>
+#pragma comment(lib,"psapi.lib")
+//----------------------------------------------------------------------------------------
+#pragma warning (disable:4309 4244 4996 4102 4305)
+
+//----------------------------------------------------------------------------------------
+#define ResultGetMatrix				0x20
+#define ResultGetWorld				0x12C0
+#define ResultGetWorldview			0x80
+#define ResultRDataContex			0x9A0
+//----------------------------------------------------------------------------------------
+LPD3DXLINE pLine    = NULL;
+LPD3DXFONT pFonts	= NULL;
+LPD3DXFONT fName	= NULL;
+LPD3DXFONT fSmall	= NULL;
+LPD3DXFONT Title    = NULL;
+LPD3DXFONT fTime	= NULL;
+LPD3DXFONT      g_pFont = NULL;
+LPD3DXFONT      g_pFont2 = NULL;
+LPD3DXLINE      g_Line = NULL;
+LPD3DXFONT vkstring    = NULL;
+LPD3DXFONT Obstring    = NULL;
+LPD3DXFONT HICFontGUI = NULL;
+LPDIRECT3DDEVICE9 pDevice;
+D3DVIEWPORT9    g_ViewPort;
+LPD3DXFONT pFont = NULL;
+D3DVIEWPORT9 Viewport;
+D3DXVECTOR3 vStart,vEnd;
+D3DXVECTOR3 vvStart,vvEnd;
+D3DXVECTOR3 vStart2,vEnd2;
+D3DXVECTOR3 vvStart2,vvEnd2;
+D3DXVECTOR3 vStart3,vEnd3;
+D3DXVECTOR3 vvStart3,vvEnd3;
+D3DXVECTOR3 vStart4,vEnd4;
+D3DXVECTOR3 vvStart4,vvEnd4;
+D3DXVECTOR3 vStart5,vEnd5;
+D3DXVECTOR3 vvStart5,vvEnd5;
+D3DXVECTOR3 vStart6,vEnd6;
+D3DXVECTOR3 vvStart6,vvEnd6;
+D3DXVECTOR3 vStart7,vEnd7;
+D3DXVECTOR3 vvStart7,vvEnd7;
+D3DXVECTOR3 vStart8,vEnd8;
+D3DXVECTOR3 vvStart8,vvEnd8;
+D3DXVECTOR3 vStart9,vEnd9;
+D3DXVECTOR3 vvStart9,vvEnd9;
+D3DXVECTOR3 vStart10,vEnd10;
+D3DXVECTOR3 vvStart10,vvEnd10;
+//----------------------------------------------------------------------------------------
+DWORD TeamColor;
+D3DVECTOR Player;
+D3DVECTOR HeadPos;
+D3DVECTOR PlayerScaled;
+D3DVECTOR HeadScaled;
+D3DVECTOR BonePos;
+D3DVECTOR ScreenPos;
+DWORD NameCol;
+DWORD HeadCol;
+DWORD BoneCol;
+DWORD LineCol;
+DWORD BoxCol;
+DWORD DisCol;
+//----------------------------------------------------------------------------------------
+class GM;
+class PlayerInfo;
+class RenderContext;
+class RenderData;
+class CGameBase;
+class CBonesContext;
+class CBone;
+class cGameStageInfo;
+//----------------------------------------------------------------------------------------
+DWORD dwGFX			= (DWORD)GetModuleHandle("i3GfxDx.dll");
+RenderContext *pRC	= (RenderContext*)(dwGFX + 0x1EA7B0);
+//----------------------------------------------------------------------------------------
+class RenderData{
+public:
+char _0x0000[ResultGetMatrix];
+D3DXMATRIX ViewMatrix;
+D3DXMATRIX ProjMatrix;
+char _0x00A0[ResultGetWorld];
+D3DXMATRIX World;
+};
+//----------------------------------------------------------------------------------------
+class RenderContext{
+public:
+RenderData* pRenderData; 
+char unknown4[ResultRDataContex];
+D3DXVECTOR3 bone;
+D3DXVECTOR3 bone1;
+D3DXVECTOR3 bone2;
+};
+//----------------------------------------------------------------------------------------
+class Bone
+{
+public:
+	D3DXMATRIX m_Bone;
+};
+
+
+
+
+//----------------------------------------------------------------------------------------
+struct CHealth{
+float CurHP;
+};
+//----------------------------------------------------------------------------------------
+struct CPlayers
+{
+	bool Layer;
+    float yaw;
+    float pitch;
+	char unkn[0x60];
+    D3DXVECTOR3 pos;
+	D3DXVECTOR3 Targetpos;
+};
+//----------------------------------------------------------------------------------------
+struct CPlayersX
+{
+    float yaw;
+    float pitch;
+    D3DXVECTOR3 pos;
+    char unkno8[0x60];
+};
+//----------------------------------------------------------------------------------------
+struct CRank{
+BYTE iRank;
+};
+//----------------------------------------------------------------------------------------
+struct CNames{
+char szNames[33];
+};
+//----------------------------------------------------------------------------------------
+class GM{
+public:
+BYTE iRank;
+char _0x0001[15];
+WORD iHack;
+};
+//----------------------------------------------------------------------------------------
+struct CTeam{
+BYTE iTeam;
+};
+//----------------------------------------------------------------------------------------
+class CLog;
+class CLog{
+public:
+BYTE iLog;
+};
+//----------------------------------------------------------------------------------------
+class CDeathPlayer{
+public:
+BYTE Death[16];
+};
+//----------------------------------------------------------------------------------------
+class CLocalPlayerID{
+public:
+BYTE ID;
+};
+//----------------------------------------------------------------------------------------
+extern RenderContext *pRC;
+//-------------------------------------------------------------------------------//
+static struct key_s{
+	bool bPressed;
+	DWORD dwStartTime;}
+kPressingKey[256];
+BOOL IsKeyPressed(int Key,DWORD dwTimeOut){
+	if( HIWORD( GetKeyState( Key ) ) ){
+		if( !kPressingKey[Key].bPressed || ( kPressingKey[Key].dwStartTime && ( kPressingKey[Key].dwStartTime + dwTimeOut ) <= GetTickCount( ) ) ){
+			kPressingKey[Key].bPressed = TRUE;
+			if( dwTimeOut > NULL )
+				kPressingKey[Key].dwStartTime = GetTickCount( );
+			return TRUE;}}else
+		kPressingKey[Key].bPressed = FALSE;
+	return FALSE;}
+//----------------------------------------------------------------------------------------
+void  MakeJMP( BYTE *pAddress, DWORD dwJumpTo, DWORD dwLen ){
+__try {
+    DWORD dwOldProtect, dwBkup, dwRelAddr;
+    VirtualProtect(pAddress, dwLen, PAGE_EXECUTE_READWRITE, &dwOldProtect);
+    dwRelAddr = (DWORD) (dwJumpTo - (DWORD) pAddress) - 5;
+    *pAddress = 0xE9;
+    *((DWORD *)(pAddress + 0x1)) = dwRelAddr;
+    for(DWORD x = 0x5; x < dwLen; x++) *(pAddress + x) = 0x90;
+    VirtualProtect(pAddress, dwLen, dwOldProtect, &dwBkup);
+    return;}__except ( EXCEPTION_EXECUTE_HANDLER ) {
+	return ;}}
+//----------------------------------------------------------------------------------------
+void LongPtr ( DWORD adress, DWORD offset, DWORD offset2, int Value ){
+	__try{
+		DWORD OldPtr;
+		OldPtr = *(PDWORD)((DWORD)adress) + offset;
+		OldPtr = *(PDWORD)((DWORD)OldPtr) + offset2;
+		*(int*)(OldPtr) = Value;}
+	__except (EXCEPTION_EXECUTE_HANDLER){}}
+//----------------------------------------------------------------------------------------
+void _WriteMEM(DWORD Adr, DWORD Ptr1, DWORD Ptr2, DWORD Ptr3, DWORD WriteValue){
+	DWORD Temp=0;
+	if (IsBadReadPtr((PDWORD)Adr, 4) == 0){ 
+		Temp = *(PDWORD)((DWORD)(Adr)) + Ptr1;
+		if (IsBadReadPtr((PDWORD)Temp,4) == 0){ 
+			Temp = *(PDWORD)((DWORD)(Temp)) + Ptr2;
+			if (IsBadReadPtr((PDWORD)Temp,4) == 0){ 
+				Temp = *(PDWORD)((DWORD)(Temp)) + Ptr3;
+				if (IsBadReadPtr((PDWORD)Temp,4) == 0){
+					*(PDWORD)Temp = WriteValue;
+				}}}}}
+//----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------
+void PrivateOnly(void *adr, void *ptr, int size){ 
+	DWORD NextProtection;
+	VirtualProtect(adr,size,PAGE_EXECUTE_READWRITE, &NextProtection);
+	Sleep(1);
+	Sleep(1);
+	RtlCopyMemory(adr,ptr,size);
+	Sleep(1);
+	Sleep(1);
+	VirtualProtect(adr,size,NextProtection, &NextProtection);}
+//----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
+void Hooked(PDWORD target, PDWORD newfunc){
+	DWORD Jmpto=(DWORD)(newfunc)-(DWORD)target-5;
+	DWORD a;
+	VirtualProtect(target, 8, PAGE_EXECUTE_READWRITE, &a);
+	*(PBYTE)(target)=0xE9;
+	*(PDWORD)((DWORD)(target)+1)=Jmpto;
+	VirtualProtect(target, 8, a, &a);}
+//----------------------------------------------------------------------------------------
+DWORD ReadFunct(DWORD dwPtr, DWORD dwOfs){ 
+DWORD C; 
+if(IsBadReadPtr((PDWORD)(dwPtr),4)==0){ 
+C=*(PDWORD)((DWORD)(dwPtr))+dwOfs; 
+if(IsBadReadPtr((PDWORD)(C),4)==0){ 
+return *(PDWORD)C; 
+}
+}
+return C;
+}
+//----------------------------------------------------------------------------------------
+DWORD MakePTR(BYTE *MemoryTarget, DWORD FunctionTarget)
+{
+	DWORD dwOldProtect,dwBkup;
+	DWORD dwRetn = *(DWORD*)(MemoryTarget);
+
+	VirtualProtect(MemoryTarget, 4, PAGE_EXECUTE_READWRITE, &dwOldProtect);
+	*((DWORD *)(MemoryTarget)) = FunctionTarget;
+	VirtualProtect(MemoryTarget, 4, dwOldProtect, &dwBkup);
+	return dwRetn;
+}
+//----------------------------------------------------------------------------------------
+DWORD Read(DWORD dwPtr, DWORD dwOfs)
+{ 
+	DWORD C; 
+	if(IsBadReadPtr((PDWORD)(dwPtr),4)==0){ 
+		C=*(PDWORD)((DWORD)(dwPtr))+dwOfs; 
+		if(IsBadReadPtr((PDWORD)(C),4)==0){ 
+			return *(PDWORD)C; 
+		} 
+	} 
+	return C;
+}
+//----------------------------------------------------------------------------------------
+bool MakePoint(unsigned long ADRexec, int OFSexec, int PTRexec){
+	if (!IsBadReadPtr((void*)ADRexec, sizeof(unsigned long))){
+		if (!IsBadReadPtr((void*)(*(unsigned long*)ADRexec + OFSexec), sizeof(unsigned long))){
+			*(int*)(*(unsigned long*)ADRexec + OFSexec) = PTRexec;
+		}
+	}
+	return 0;
+}
+//----------------------------------------------------------------------------------------
+void PacthHook(void *adr, void *ptr, int size)
+{
+	DWORD CheckProtection = 0;
+	VirtualProtect(adr,size,PAGE_EXECUTE_READWRITE, &CheckProtection);
+	RtlMoveMemory(adr,ptr,size);
+	VirtualProtect(adr,size,CheckProtection, &CheckProtection);
+}
+DWORD FindDmaAddy(int PointerLevel, DWORD Offsets[], DWORD BaseAddress) {
+DWORD Ptr = *(DWORD*)(BaseAddress);
+if(Ptr == 0) return NULL;
+for(int i = 0; i < PointerLevel; i ++)
+{
+if(i == PointerLevel-1)
+{
+Ptr = (DWORD)(Ptr+Offsets[i]);
+if(Ptr == 0) return NULL;
+return Ptr;
+}
+else
+{
+Ptr = *(DWORD*)(Ptr+Offsets[i]);
+if(Ptr == 0) return NULL;
+}
+}
+return Ptr;
+}
+void  VersiLongKnife( BYTE *pAddress, DWORD dwJumpTo, DWORD dwLen )
+{
+__try {
+    DWORD dwOldProtect, dwBkup, dwRelAddr;
+    VirtualProtect(pAddress, dwLen, PAGE_EXECUTE_READWRITE, &dwOldProtect);
+    dwRelAddr = (DWORD) (dwJumpTo - (DWORD) pAddress) - 5;
+    *pAddress = 0xE9;
+    *((DWORD *)(pAddress + 0x1)) = dwRelAddr;
+    for(DWORD x = 0x5; x < dwLen; x++) *(pAddress + x) = 0x90;
+    VirtualProtect(pAddress, dwLen, dwOldProtect, &dwBkup);
+    return;
+}__except ( EXCEPTION_EXECUTE_HANDLER ) {
+	return ;
+}}
+void XwhriteX (void *adr, void *ptr, int size)
+{
+DWORD CheckProtection = 0;
+VirtualProtect(adr, size, PAGE_EXECUTE_READWRITE, &CheckProtection);
+RtlMoveMemory(adr, ptr, size);
+VirtualProtect(adr, size, CheckProtection, &CheckProtection);
+}
+//----------------------------------------------------------------------------------------
+//---------------------------------------------------------// Last Coded By Stenly Andika-
+//----------------------------------------------------------------------------------------
