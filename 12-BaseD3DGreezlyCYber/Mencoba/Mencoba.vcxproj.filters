@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Direct">
+      <UniqueIdentifier>{81883335-9299-4460-ba92-835580e8e09c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworkSDK">
+      <UniqueIdentifier>{22539087-41b0-4086-9b04-e95129e1938a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Module Fitur">
+      <UniqueIdentifier>{d6adf008-10de-4d9b-b9b6-86563547bd93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Qor">
+      <UniqueIdentifier>{022e6dfb-c37e-4669-ad3e-2003c4b735da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Texture">
+      <UniqueIdentifier>{a06985a3-680a-4420-9402-a2657ab2d11a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CGameCharaBase.h">
+      <Filter>Header Files\FrameworkSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameCharaManager.h">
+      <Filter>Header Files\FrameworkSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameContext.h">
+      <Filter>Header Files\FrameworkSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="cGameEvent_Fire.h">
+      <Filter>Header Files\FrameworkSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameFramework.h">
+      <Filter>Header Files\FrameworkSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameUDPHandler.h">
+      <Filter>Header Files\FrameworkSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="cLass.h">
+      <Filter>Header Files\Direct</Filter>
+    </ClInclude>
+    <ClInclude Include="cMenu.h">
+      <Filter>Header Files\Direct</Filter>
+    </ClInclude>
+    <ClInclude Include="cD3D.h">
+      <Filter>Header Files\Direct</Filter>
+    </ClInclude>
+    <ClInclude Include="cFunction.h">
+      <Filter>Header Files\Direct</Filter>
+    </ClInclude>
+    <ClInclude Include="i3RenderContext.h">
+      <Filter>Header Files\FrameworkSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="cFastKiller.h">
+      <Filter>Header Files\Module Fitur</Filter>
+    </ClInclude>
+    <ClInclude Include="cHack.h">
+      <Filter>Header Files\Module Fitur</Filter>
+    </ClInclude>
+    <ClInclude Include="Fattern.h">
+      <Filter>Header Files\Module Fitur</Filter>
+    </ClInclude>
+    <ClInclude Include="cStdafx.h">
+      <Filter>Header Files\Qor</Filter>
+    </ClInclude>
+    <ClInclude Include="XorStr.h">
+      <Filter>Header Files\Qor</Filter>
+    </ClInclude>
+    <ClInclude Include="XStr.h">
+      <Filter>Header Files\Qor</Filter>
+    </ClInclude>
+    <ClInclude Include="cStride.h">
+      <Filter>Header Files\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools.h">
+      <Filter>Header Files\Texture</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XStr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
