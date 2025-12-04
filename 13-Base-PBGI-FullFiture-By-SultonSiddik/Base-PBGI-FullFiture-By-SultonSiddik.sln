@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Base-PBGI-FullFiture-By-SultonSiddik", "Base-PBGI-FullFiture-By-SultonSiddik\Base-PBGI-FullFiture-By-SultonSiddik.vcxproj", "{472C1FD9-FA74-479D-999C-285ADDEC9E34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{472C1FD9-FA74-479D-999C-285ADDEC9E34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{472C1FD9-FA74-479D-999C-285ADDEC9E34}.Debug|Win32.Build.0 = Debug|Win32
+		{472C1FD9-FA74-479D-999C-285ADDEC9E34}.Release|Win32.ActiveCfg = Release|Win32
+		{472C1FD9-FA74-479D-999C-285ADDEC9E34}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
